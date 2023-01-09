@@ -1026,6 +1026,36 @@ module.exports = {
             "zkEVM/zkProver/pil-stark-demo",
           ]
         },
+        {
+          type: "category",
+          label: "Generic SM",
+          link: {
+            type: "generated-index"
+          },
+          items:[
+            "zkEVM/zkProver/intro-generic-sm",
+            "zkEVM/zkProver/exec-trace-correct",
+            "zkEVM/zkProver/ending-program",
+            "zkEVM/zkProver/program-counter"
+          ]
+        },
+        {
+          type: "category",
+          label: "Storage SM",
+          link: {
+            type: "generated-index"
+          },
+          items:[
+            "zkEVM/zkProver/intro-storage-sm",
+            "zkEVM/zkProver/sparse-merkle-tree",
+            "zkEVM/zkProver/simple-smt",
+            "zkEVM/zkProver/detailed-smt-concepts",
+            "zkEVM/zkProver/basic-smt-ops",
+            "zkEVM/zkProver/construct-key-path",
+            "zkEVM/zkProver/storage-sm-mechanism",
+            "zkEVM/zkProver/executor-pil",
+          ]
+        },
       ]
     },
     "zkEVM/lx-ly-bridge",

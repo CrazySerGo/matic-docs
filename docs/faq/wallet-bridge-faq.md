@@ -258,12 +258,18 @@ If you still have some remaining funds, transfer them immediately to a new walle
 
 As the Ethereum Network has Goerli as its test network, the Polygon Mainnet has Mumbai. All transactions on this test network will be indexed on the Mumbai Explorer.
 
+## How can I swap my tokens for other tokens?
+Please follow [this tutorial](/docs/develop/wallets/polygon-web-wallet/web-wallet-v3-guide.md#token-swap).
+
 ## The Token Swap is too slow.
 
 If you are trying to swap tokens and it is taking too long, you could try the same transaction on a different browser. If that doesn’t work and you’re facing an error, please send a screenshot to our Support team.
 
 ## Which tokens are charged as the gas fees for token swap?
 Only MATIC.
+
+## How can I swap my token for gas?
+Please follow [this tutorial](/docs/develop/wallets/polygon-web-wallet/web-wallet-v3-guide.md#swap-for-gas).
 
 ## Which tokens can be used to swap for gas?
 Only these Tokens are supported for ‘Swap for Gas’: ETH, USDC, USDT, DAI, AAVE, LINK, WBTC, UNI, GHST, TEL, EMON, and COMBO.

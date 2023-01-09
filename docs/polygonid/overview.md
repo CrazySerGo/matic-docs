@@ -17,9 +17,17 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Based on the principles of Self-Sovereign Identity (SSI) and cryptography, Polygon ID is a decentralised and permissionless identity framework for web2 and web3 applications. The SSI framework lets individuals own and control their identities. 
 
+:::info
+
+For the latest technical documentation and tutorials, please head over to our [<ins>Polygon ID tutorials page</ins>](https://0xpolygonid.github.io/tutorials/).
+
+:::
+
 :::tip Contact
 
-You can always refer to our [<ins>twitter page</ins>](https://twitter.com/0xpolygonid) to stay updated with the Polygon ID latest development.  
+You can ask questions in our [<ins>discord for Polygon ID</ins>](https://discord.com/channels/635865020172861441/1052090291743637504)
+
+Also please refer to our [<ins>Twitter page</ins>](https://twitter.com/0xpolygonid) to stay updated with the latest developments on Polygon ID. 
 
 :::
 

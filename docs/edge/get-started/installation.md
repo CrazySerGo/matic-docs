@@ -34,7 +34,7 @@ Official Docker images are hosted under the [hub.docker.com registry](https://hu
 
 Prior to using `go install` make sure that you have Go `>=1.18` installed and properly configured.
 
-The stable branch is `develop`.
+The stable branch is the branch of the latest release.
 
 ```shell
 git clone https://github.com/0xPolygon/polygon-edge.git
@@ -49,6 +49,6 @@ sudo mv polygon-edge /usr/local/bin
 
 Prior to using `go install` make sure that you have Go `>=1.17` installed and properly configured.
 
-`go install github.com/0xPolygon/polygon-edge@develop`
+`go install github.com/0xPolygon/polygon-edge@release/<latest release>`
 
-The binary will be available in your `GOBIN` environment variable, and will include the latest changes from the mainline `develop` branch.
+The binary will be available in your `GOBIN` environment variable, and will include the changes from the latest release. You can checkout out [GitHub Releases](https://github.com/0xPolygon/polygon-edge/releases) to find out which one is the latest.
