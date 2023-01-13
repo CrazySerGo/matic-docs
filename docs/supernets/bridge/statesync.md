@@ -53,13 +53,11 @@ each execution requires a gas fee. This also encourages optimized use of the bri
 Here is the typical process of how the `StateReceiver` contract might be used to commit
 and execute a group of StateSync objects:
 
-- The system address creates a `StateSyncBundle` representing a group of state sync events
+- The system address creates a `StateSyncCommitment` representing a group of state sync events
   and signs.
-- The system address calls the commit function with the `StateSyncBundle`, the `signature`,
+- The system address calls the commit function with the `StateSyncCommitment`, the `signature`,
   and the `bitmap` as arguments.
-- The `commit` function verifies the signature and stores the `StateSyncBundle` in the
-  `bundles` mapping.
-- A client calls the `execute` function with the `proof` and the array of `StateSync` for the
-  group of state sync events.
-- The `execute` function verifies the `proof` and processes each state sync event in the
-  group by calling the `processSync` function for each event.
+- The `commit` function verifies the signature and stores the `StateSyncCommitment` in the
+  `commitments` mapping.
+- A client calls the `execute` function with the `proof` and the `StateSync`.
+- The `execute` function verifies the `proof` and processes the state sync event.

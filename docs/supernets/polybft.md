@@ -65,8 +65,7 @@ Each PolyBFT node maintains a local copy of the blockchain. The PolyBFT blockcha
 as a list of blocks, like the Ethereum blockchain. The height of a block is defined as the number
 of parent links that separate the block from the genesis block, with height 0. The protocol runs
 sequential instances of a block finalization protocol, where the objective of the h-th instance is
-to decide which Ethereum block is to be added at height `h` of the blockchain. In PolyBFT, the height
-is referred to as the *sequence*.
+to decide which Ethereum block is to be added at height `h` of the blockchain.
 
 ## Consensus Engine: IBFT 2.0
 
@@ -76,7 +75,7 @@ engine to seal blocks.
 IBFT includes a validator pool (or set) responsible for validating candidate blocks proposed
 by a randomly selected block proposer who is part of the validator pool. The proposer is responsible
 for constructing a block at the block interval. The proposer mechanism is based on Tendermint, where
-a proposer is chosen based a deterministic selection algorithm. The frequency in selection is also
+a proposer is chosen based a deterministic selection algorithm. The frequency in selection is
 proportional to the voting power of the validator.
 
  > The amount of voting power a validator has is proportional to the amount of stake that they have locked
@@ -85,13 +84,13 @@ proportional to the voting power of the validator.
 
 Each block in IBFT requires multiple rounds of voting
 by the validator to arrive at consensus, which is recorded as a collection of signatures on the block
-content. A super-majority of validators must validate the block to be added to the blockchain.
+content. A super-majority of validators must confirm that block is valid in order for the block to be added to the blockchain.
 
 :::note
 
-The validator selection algorithm still needs to be determined. It will resemble the diagram,
+The proposer selection algorithm still needs to be determined. It will resemble the diagram,
 where x, y, z are input parameters related to the selection, the "Round #" is the current
-Round Number of the system, and "validator n" is the selected validator.
+Round Number of the system, and "validator n" is the selected proposer.
 
 <!-- TO ADD PROPER DIAGRAM -->
 
@@ -127,7 +126,7 @@ Round Number of the system, and "validator n" is the selected validator.
 - **High data integrity and fault tolerance**: IBFT uses a pool of validators to ensure the
   integrity of each proposed block. A super-majority (~66%) of these validators are required to
   sign the block before insertion to the chain, making block forgery very difficult. Also, the
-  proposer of the pool rotates over time — ensuring a faulty node cannot exert long-term influence
+  proposer of the block rotates over time — ensuring a faulty node cannot exert long-term influence
   over the chain.
 - **Operationally flexible**: The validators can be modified in time, ensuring the group contains
   only full-trusted nodes.
@@ -161,7 +160,7 @@ best interests.
 ## Consensus protocol: PolyBFT
 
 The consensus protocol uses the IBFT consensus engine and proof-of-stake architecture to seal blocks,
-provide specific network capabilities, and govern the network. The consensus engine works with a set of
+provide specific network capabilities and govern the network. The consensus engine works with a set of
 core smart contracts that implements a staking solution and incentivization scheme which defines all the
 network's proof-of-stake rules.
 
